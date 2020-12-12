@@ -4,51 +4,58 @@ using System.IO;
 
 namespace Exercise
 {
+
     public class Program
     {
-        public int OpenFile(string fileName)
-        { // opens a local file from a given path such as Exercise.Tests/files/text1.txt
-          // returns -2 if directory does not exist, -1 if file could not be opened; 0 if everything worked
 
-                return -1;
+        /// <summary>
+        ///Split the given text using the given character and
+        ///shuffle the strings so that the elements are concatinated in reverse order
+        ///using the separator to connect them.
+        ///
+        /// Now also make sure to keep the dot at the end of the sentence and that the
+        /// all words in the sentence are lower case except for the sentence start
+        /// example: "Hello my friend.", ' ' turns into "Friend my hello."
+        /// </summary>
+        /// <param name="text1">a sample sentence to read</param>
+        /// <param name="separator">the separator used between the words</param>
+        /// <returns></returns>
+        public string ShuffelTheText(string text1, char separator)
+        {
+            return string.Empty;
         }
 
-        public string[] OpenFileAndReadLines(string fileName, int howMany)
-        { // opens a local file from a given path such as Exercise.Tests/files/text1.txt
-          // returns the first <howMany> lines from the given file or an empty string array if the file does not exist
-
-            return null;
+        /// <summary>
+        /// Adds a subset of integer numbers. Each number used must be smaller than boundary
+        /// using LINQ or Lists will result in failing the entire exercise
+        /// </summary>
+        /// <param name="array">the input dataset</param>
+        /// <param name="boundary">the threshold which defines the value above the maximum number that should considered for addition</param>
+        /// <returns>the sum of all numbers that are below the threshold</returns>
+        public int AddValuesBelowBoundary(int[] array, int boundary)
+        {
+            return -10000;
         }
 
-        public int PersistentFileOpen(string fileName)
-        { // opens a local file from a given path such as Exercise.Tests/files/text1.txt
-          // returns -2 if directory does not exist, -1 if file could not be opened; 0 if everything worked
-          // return 1 if the file is already open
-
-
-            return -1;
+        /// <summary>
+        /// Retrieve Substring between start and finish.
+        /// Split the given string and create a new string that combines all split elements including the split character
+        /// from the start and before the finish index ( cuts in the text) .
+        /// </summary>
+        /// <param name="original">The input text which contains a number of potential split characters</param>
+        /// <param name="split">the character used to cut the original</param>
+        /// <param name="start">the first part to take and add it to the return value</param>
+        /// /// <param name="finish">the index beyond the values to take into account</param>
+        /// <returns></returns>
+        public string ReturnSpecificSubText(string original, char split, int start, int finish)
+        {
+            return "";
         }
 
-        public int PersistentFileClose(string fileName)
-        { // closes a local file from a given path such as Exercise.Tests/files/text1.txt
-          // returns -1 if file could not be closed; 0 if everything worked
-
-            return -1;
-        }
-
-        public string[] PersistentFileRead(int numOfLines)
-        { // uses the last opened file and reads a given number of lines
-          // returns <numOfLines> lines from the given file or 
-          //  an empty string array if the file does not exist
-          // if called a second time it again reads from the beginning of the file
-
-
-            return new string[10];
-        }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Exercise 7!");
+            Console.WriteLine("Welcome to Exercise 10!");
         }
     }
 }
